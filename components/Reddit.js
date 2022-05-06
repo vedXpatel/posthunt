@@ -53,7 +53,7 @@ const Reddit = () => {
     };
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={{backgroundColor:'#FDBA00'}}>
             { loading===true ? <Text>Loading..</Text> : 
             <ScrollView ref={ref}>
                 <View style={{ flex: 1 }}>
@@ -85,20 +85,21 @@ const styles = StyleSheet.create({
         aspectRatio: 1/1,
         marginLeft:25,
         marginRight:25,
-        borderRadius:15,
-        borderColor: 'black',
+        borderRadius:25,
+        borderColor: 'white',
+        borderWidth: 10,
     },
     postAccount:{
         borderColor: "black",
     },
     caption:{
-        marginBottom: 25,
-        backgroundColor: "#f2af05",
+        backgroundColor: "#ffffff",
         marginTop:25,
         marginLeft:25,
         marginRight:25,
-        borderRadius:35,
         padding:15,
+        borderTopLeftRadius:25,
+        borderTopRightRadius:25,
     },
 });
 

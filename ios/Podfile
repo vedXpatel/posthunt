@@ -21,6 +21,10 @@ target 'posthunt' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
+  pod 'react-native-blur', :path => '../node_modules/@react-native-community/blur'
+
   target 'posthuntTests' do
     inherit! :complete
     # Pods for testing

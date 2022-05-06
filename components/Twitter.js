@@ -11,6 +11,8 @@ import {
     View,
     Button,
 } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import { BlurView } from "@react-native-community/blur";
 
 const Twitter = () => {
 
@@ -57,10 +59,18 @@ const Twitter = () => {
             <Button title="refresh" onPress={refresh}><Text>Refresh</Text></Button>
             {Object.entries(twitter).map(([key, value]) => {
                         return (
+                            
                             <View style={styles.tweetView}>
+                                <LinearGradient
+                                start={{ x: 0.0, y: 1 }}
+                                end={{ x: 0.8, y: 0.0}}
+                                locations={[0, 0.8]}
+                                colors={['#fdc830', '#FA9600']}
+                                style={styles.gradient}>
                                 <Image source={{ uri: profile}} style={styles.image}/>
                                 <Text style={styles.profile} key={key+1000}>{name}   @{username}</Text>
                                 <Text key={key} style={styles.tweetText}>{value}</Text>
+                            </LinearGradient>
                             </View>
                         );
                     })}
@@ -76,6 +86,9 @@ const styles = StyleSheet.create({
         marginTop:25,
         marginLeft:25,
         marginRight:25,
+        borderRadius:25,
+    },
+    gradient: {
         borderRadius:25,
     },
     profile: {
