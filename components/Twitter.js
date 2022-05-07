@@ -22,7 +22,7 @@ const Twitter = () => {
 
     const request = async() => {
         axios
-            .get('http://10.0.2.2:5000/')
+            .get('https://posthunt-api-flask.herokuapp.com/')
             .then(function (response) {
                 setTwitter(response.data);
             })
@@ -36,7 +36,7 @@ const Twitter = () => {
 
     const refresh = () => {
         axios
-            .get('http://10.0.2.2:5000/')
+            .get('https://posthunt-api-flask.herokuapp.com/')
             .then(function (response) {
                 setTwitter(response.data);
             })
